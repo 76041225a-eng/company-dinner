@@ -73,30 +73,8 @@
         </select>
       </div>
       <div class="filter-group">
-        <label>인원 수 (명)</label>
-        <input type="number" id="people" placeholder="예) 10" min="1" max="200">
-      </div>
-      <div class="filter-group">
-        <label>1인 예산 (원)</label>
-        <select id="budget">
-          <option value="">제한 없음</option>
-          <option value="15000">1만5천원 이하</option>
-          <option value="20000">2만원 이하</option>
-          <option value="30000">3만원 이하</option>
-          <option value="50000">5만원 이하</option>
-          <option value="100000">10만원 이하</option>
-        </select>
-      </div>
-      <div class="filter-group">
-        <label>분위기</label>
-        <select id="mood">
-          <option value="">전체 분위기</option>
-          <option value="캐주얼">캐주얼</option>
-          <option value="고급">고급/접대</option>
-          <option value="프라이빗">프라이빗</option>
-          <option value="활기찬">활기찬</option>
-          <option value="전통">전통</option>
-        </select>
+        <label>키워드 (선택)</label>
+        <input type="text" id="keyword" placeholder="예) 룸, 삼겹살, 단체">
       </div>
     </div>
     <button class="btn-search" onclick="search()">🔍 회식 장소 찾기</button>
@@ -130,12 +108,6 @@
   <div class="section-header">
     <h2 class="section-title">추천 회식 장소</h2>
     <span class="result-count" id="result-count">로딩 중...</span>
-  </div>
-  <div class="sort-bar">
-    <button class="sort-btn active" data-sort="rating" onclick="setSort('rating')">⭐ 평점순</button>
-    <button class="sort-btn" data-sort="review" onclick="setSort('review')">💬 리뷰순</button>
-    <button class="sort-btn" data-sort="budget-asc" onclick="setSort('budget-asc')">💰 저렴한순</button>
-    <button class="sort-btn" data-sort="budget-desc" onclick="setSort('budget-desc')">👑 고급순</button>
   </div>
   <div class="cards-grid" id="cards-grid">
     <!-- JS로 렌더링 -->
