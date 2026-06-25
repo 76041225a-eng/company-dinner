@@ -18,7 +18,7 @@ function search() {
   const mood = document.getElementById('mood').value;
 
   filtered = allRestaurants.filter(r => {
-    if (region && r.region !== region) return false;
+    if (region && r.district !== region) return false;
     if (cuisine && r.cuisine !== cuisine) return false;
     if (people && (r.minPeople > people || r.maxPeople < people)) return false;
     if (budget && r.budgetMax > budget) return false;
